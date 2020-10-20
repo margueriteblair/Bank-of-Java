@@ -12,6 +12,11 @@ public class Main {
         //int accountNumber, int balance, String owner, String acctType
         System.out.println();
         mySavings.compoundInterest();
+        mySavings.setTxCount(0);
+        mySavings.withdraw(300);
+        myChecking.withdraw(300);
+        myChecking.withdraw(700);
+        myChecking.showTxCount();
 //        System.out.println(mySavings.getDetails());
     }
 }
