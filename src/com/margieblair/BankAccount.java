@@ -1,6 +1,6 @@
 package com.margieblair;
 
-public class BankAccount {
+public abstract class BankAccount {
     private int accountNumber;
     private String owner;
     protected int balance;
@@ -22,10 +22,11 @@ public class BankAccount {
             balance -= amt;
             return;
         }
+        System.out.println("Insufficient funds to make this transaction.");
         return;
     }
 
     public String getDetails() {
-        return acctType + " Account, Owner: " + owner + "\nAccount Number: " + accountNumber + "\nBalance: " + balance;
+        return acctType + " Account\nOwner: " + owner + "\nAccount Number: " + accountNumber + "\nBalance: " + balance;
     }
 }
