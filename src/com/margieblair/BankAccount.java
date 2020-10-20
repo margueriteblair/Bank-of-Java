@@ -14,6 +14,10 @@ public abstract class BankAccount {
     }
 
     public void deposit(int amt) {
+        if (amt < 0) {
+            System.out.println("Cannot accept negative deposit amount.");
+            return;
+        }
         balance += amt;
     }
 
