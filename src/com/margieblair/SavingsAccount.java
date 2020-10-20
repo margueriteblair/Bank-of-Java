@@ -5,9 +5,11 @@ public class SavingsAccount extends BankAccount {
     private int txLimit;
     private int txCount;
 
-    public SavingsAccount(int accountNumber, int balance, String owner, int interest) {
+    public SavingsAccount(int accountNumber, int balance, String owner, int interest, int txCount, int txLimit) {
         super(accountNumber, balance, owner, "Savings");
         this.interest = interest;
+        this.txCount = txCount;
+        this.txLimit = txLimit;
     }
 
     public void compoundInterest() {
@@ -16,16 +18,24 @@ public class SavingsAccount extends BankAccount {
 
     @Override
     public void withdraw(int amt) {
-        setTxCount();
+        incrementTxCount();
+        if (txCount > txLimit) {
+            System.out.println("Transaction limit reached for savings account! Try again next month.");
+            return;
+        }
         super.withdraw(amt);
     }
 
-    public void resetMonthlyTxCount() {
-        txCount = 0;
+//    public void resetMonthlyTxCount() {
+//        txCount = 0;
+//    }
+
+    public void incrementTxCount() {
+        txCount++;
     }
 
-    public void setTxCount() {
-        txCount++;
+    public void setTxCount(int newTxCount) {
+        txCount = newTxCount;
     }
 
 }
