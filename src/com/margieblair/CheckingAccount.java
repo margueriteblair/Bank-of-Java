@@ -1,4 +1,7 @@
 package com.margieblair;
 
-public class CheckingAccount {
+public class CheckingAccount extends BankAccount {
+    public CheckingAccount(int accountNumber, int balance, String owner, String acctType) {
+        super(accountNumber, balance, owner, "Checking");
+    }
 }
