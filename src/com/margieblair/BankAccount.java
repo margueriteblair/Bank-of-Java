@@ -33,4 +33,10 @@ public abstract class BankAccount {
     public String getDetails() {
         return acctType + " Account\nOwner: " + owner + "\nAccount Number: " + accountNumber + "\nBalance: " + balance;
     }
+
+    public double convertToDollars() {
+        System.out.println(balance / 100D);
+        return balance / 100D;
+
+    }
 }

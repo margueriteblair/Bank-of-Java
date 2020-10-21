@@ -10,13 +10,15 @@ public class Main {
 //        System.out.println(myChecking.getDetails());
 //        myChecking.withdraw(1000000);
         //int accountNumber, int balance, String owner, String acctType
-        System.out.println();
+//        System.out.println();
         mySavings.compoundInterest();
         mySavings.setTxCount(0);
         mySavings.withdraw(300);
         myChecking.withdraw(300);
         myChecking.withdraw(700);
-        myChecking.showTxCount();
+//        myChecking.showTxCount();
 //        System.out.println(mySavings.getDetails());
+        System.out.println(myChecking.getDetails());
+        myChecking.convertToDollars();
     }
 }
