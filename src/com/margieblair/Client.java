@@ -24,5 +24,18 @@ public class Client {
         this.cdInvestments = new ArrayList<CDInvestment>();
      }
 
+     public void addAccount(CheckingAccount account) {
+        checkingAccounts.add(account);
+     }
+
+     public void addAccount(SavingsAccount account) {
+        savingsAccounts.add(account);
+     }
+
+     public void addAccount(CDInvestment account) {
+        cdInvestments.add(account);
+     }
+
+
 
 }
