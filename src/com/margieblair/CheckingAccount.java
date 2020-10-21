@@ -23,4 +23,7 @@ public class CheckingAccount extends BankAccount {
     //    public void incrementTxCount() {
 //        txCount++;
 //    }
+    public int getBalance() {
+        return balance;
+    }
 }
