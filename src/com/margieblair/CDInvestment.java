@@ -6,7 +6,7 @@ public class CDInvestment extends InvestmentAccount {
     private char timePeriod = 'Y';
 
     public CDInvestment(int balance, int accountNum, String owner, int interestRate, int period, int timeFrame) {
-        super(balance, accountNum, owner, interestRate, period, "M");
+        super(balance, accountNum, owner, interestRate, period, 'M');
         this.timeFrame = timeFrame;
     }
 
