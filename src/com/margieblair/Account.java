@@ -9,4 +9,5 @@ public interface Account {
     public String getOwner();
     public String getDetails();
     public int getBalance();
+    public int getAccountNumber();
 }

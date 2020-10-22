@@ -12,6 +12,7 @@ public class Client {
     private String clientId;
     private List<Account> accounts;
     private List<DebitCard> debitCards;
+    private Account linkedAccount;
 //    private List<CheckingAccount> checkingAccounts;
 //    private List<SavingsAccount> savingsAccounts;
 //    private List<CDInvestment> cdInvestments;
@@ -38,7 +39,13 @@ public class Client {
             //can't use .indexOf() on objects
             //THINK MARGIE HOW DO WE PULL THE ACCOUNT NUMBER
             //FROM THE ACCOUNT LIST
-            DebitCard newCard = new DebitCard();
+
+            for (var acct : accounts) {
+                if (acct.getAccountNumber() == accountNum) {
+                    linkedAccount = acct;
+                }
+            }
+            DebitCard newCard = new DebitCard("000000000", "4444", "000", "Margie Blair", (CheckingAccount) linkedAccount);
         }
         //our bank is going to create the account
 

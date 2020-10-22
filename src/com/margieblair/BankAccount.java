@@ -36,6 +36,10 @@ public class BankAccount implements Account {
         return;
     }
 
+    public int getAccountNumber() {
+        return accountNumber;
+    }
+
     public String getDetails() {
         return acctType + " Account\nOwner: " + owner + "\nAccount Number: " + accountNumber + "\nBalance: " + balance;
     }
