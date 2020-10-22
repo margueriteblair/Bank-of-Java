@@ -1,9 +1,9 @@
 package com.margieblair;
 
 public interface Account {
+    public void withdraw(int amt);
+    public void deposit(int amt);
 
-    public int accountNumber;
-    public String owner;
-    public int balance;
-    public String type;
+    public String getDetails(int amt);
+    public int getBalance();
 }
