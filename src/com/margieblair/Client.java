@@ -11,6 +11,7 @@ public class Client {
     private String middleName;
     private String clientId;
     private List<Account> accounts;
+    private List<DebitCard> debitCards;
 //    private List<CheckingAccount> checkingAccounts;
 //    private List<SavingsAccount> savingsAccounts;
 //    private List<CDInvestment> cdInvestments;
@@ -23,11 +24,21 @@ public class Client {
 //        this.checkingAccounts = new ArrayList<CheckingAccount>();
 //        this.savingsAccounts = new ArrayList<SavingsAccount>();
 //        this.cdInvestments = new ArrayList<CDInvestment>();
-        this.accounts = new ArrayList<>(); //it'll call the data type from the already defined list
+        accounts = new ArrayList<>(); //it'll call the data type from the already defined list
+        debitCards = new ArrayList<>();
      }
 
         public void addAccount(Account account) {
             accounts.add(account);
+        }
+
+        public void addDebitCard(int accountNum) {
+        //we need to take the accountNumber we pass in, and use that to match
+            //the accountNum from the accounts ArrayList
+            //can't use .indexOf() on objects
+            //THINK MARGIE HOW DO WE PULL THE ACCOUNT NUMBER
+            //FROM THE ACCOUNT LIST
+            DebitCard newCard = new DebitCard();
         }
         //our bank is going to create the account
 

@@ -10,13 +10,13 @@ public class DebitCard {
     private String cardNumber;
     private List<Account> atmAccounts;//should actually make an interface
 
-    public DebitCard(String cardNumber, String pin, String cvv, String cardOwner, CheckingAccount primary, List atmAccounts) {
+    public DebitCard(String cardNumber, String pin, String cvv, String cardOwner, CheckingAccount primary) {
         this.cardNumber = cardNumber;
         this.pin = pin;
         this.cvv = cvv;
         this.cardOwner = cardOwner;
         this.primary = primary;
-        this.atmAccounts = atmAccounts;
+        this.atmAccounts = new ArrayList<>();
     }
 
     public boolean charge(int amt, String pin) {
