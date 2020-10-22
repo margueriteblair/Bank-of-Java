@@ -8,7 +8,7 @@ public class DebitCard {
     private String cvv;
     private String cardOwner;
     private String cardNumber;
-    private List<SavingsAccount> atmAccounts; //should actually make an interface
+    private List<Account> atmAccounts;//should actually make an interface
 
     public DebitCard(String cardNumber, String pin, String cvv, String cardOwner, CheckingAccount primary, List atmAccounts) {
         this.cardNumber = cardNumber;
@@ -25,6 +25,13 @@ public class DebitCard {
             return true;
         }
         return false;
+    }
+
+    public void addAccount(Account account) {
+        //we created an account with the bank
+        //and now the bank is linking the account to the card
+        atmAccounts.add(account); //we can add any type of account with this
+        //because all of our accounts implement Account interface
     }
 
 }

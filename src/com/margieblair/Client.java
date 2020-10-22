@@ -10,6 +10,7 @@ public class Client {
     private String lastName;
     private String middleName;
     private String clientId;
+
     private List<CheckingAccount> checkingAccounts;
     private List<SavingsAccount> savingsAccounts;
     private List<CDInvestment> cdInvestments;
