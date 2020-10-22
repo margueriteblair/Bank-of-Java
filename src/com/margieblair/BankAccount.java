@@ -1,6 +1,6 @@
 package com.margieblair;
 
-public abstract class BankAccount {
+public class BankAccount implements Account {
     private int accountNumber;
     private String owner;
     protected int balance;
@@ -19,6 +19,21 @@ public abstract class BankAccount {
             return;
         }
         balance += amt;
+    }
+
+    @Override
+    public String getOwner() {
+        return owner;
+    }
+
+//    @Override
+//    public String getDetails(int amt) {
+//        return null;
+//    }
+
+    @Override
+    public int getBalance() {
+        return balance;
     }
 
     public void withdraw(int amt) {
