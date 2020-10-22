@@ -20,6 +20,7 @@ public class CheckingAccount extends BankAccount {
         super.withdraw(amt);
     }
 
+
     //    public void incrementTxCount() {
 //        txCount++;
 //    }

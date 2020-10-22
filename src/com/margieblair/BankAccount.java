@@ -26,15 +26,6 @@ public class BankAccount implements Account {
         return owner;
     }
 
-//    @Override
-//    public String getDetails(int amt) {
-//        return null;
-//    }
-
-    @Override
-    public int getBalance() {
-        return balance;
-    }
 
     public void withdraw(int amt) {
         if (balance >= amt) {
@@ -47,6 +38,11 @@ public class BankAccount implements Account {
 
     public String getDetails() {
         return acctType + " Account\nOwner: " + owner + "\nAccount Number: " + accountNumber + "\nBalance: " + balance;
+    }
+
+    @Override
+    public int getBalance() {
+        return balance;
     }
 
     public double convertToDollars() {
