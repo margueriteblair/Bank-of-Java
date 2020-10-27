@@ -1,4 +1,4 @@
-package com.margieblair;
+package Account;
 
 public interface Account {
     //everything inside of an interface will either be public or final

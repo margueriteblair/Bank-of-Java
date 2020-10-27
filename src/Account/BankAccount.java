@@ -1,7 +1,5 @@
 package Account;
 
-import com.margieblair.Account;
-
 public class BankAccount implements Account {
     private int accountNumber;
     private String owner;

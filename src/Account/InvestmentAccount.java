@@ -1,4 +1,4 @@
-package com.margieblair;
+package Account;
 
 public class InvestmentAccount extends BankAccount {
     private int interestRate;

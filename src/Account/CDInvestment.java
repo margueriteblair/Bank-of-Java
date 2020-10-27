@@ -1,4 +1,6 @@
-package com.margieblair;
+package Account;
+
+import Account.InvestmentAccount;
 
 public class CDInvestment extends InvestmentAccount {
     //hello world
