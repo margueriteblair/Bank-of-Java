@@ -17,15 +17,15 @@ public class SavingsAccount extends BankAccount {
         balance += (balance * ((float) interest / 100.0));
     }
 
-//    @Override
-//    public void withdraw(int amt) {
-//        incrementTxCount();
-//        if (txCount > txLimit) {
-//            System.out.println("Transaction limit reached for savings account! Try again next month.");
-//            return;
-//        }
-//        super.withdraw(amt);
-//    }
+    @Override
+    public void withdraw(int amt) {
+        incrementTxCount();
+        if (txCount > txLimit) {
+            System.out.println("Transaction limit reached for savings account! Try again next month.");
+            return;
+        }
+        super.withdraw(amt);
+    }
 
 //    public void resetMonthlyTxCount() {
 //        txCount = 0;
