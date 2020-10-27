@@ -2,7 +2,7 @@ package com.margieblair;
 
 public class CDInvestment extends InvestmentAccount {
     //hello world
-    private  int timeFrame;
+    private int timeFrame;
     private char timePeriod = 'Y';
 
     public CDInvestment(int balance, int accountNum, String owner, int interestRate, int period, int timeFrame) {

@@ -1,4 +1,5 @@
-package com.margieblair;
+package Account;
+
 
 public class SavingsAccount extends BankAccount {
     private int interest;
