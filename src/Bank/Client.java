@@ -52,18 +52,7 @@ public class Client {
             }
             DebitCard newCard = new DebitCard("000000000", "4444", "000", "Margie Blair", (CheckingAccount) linkedAccount);
         }
-        //our bank is going to create the account
 
-//     public void addAccount(CheckingAccount account) {
-//        checkingAccounts.add(account);
-//     }
-//
-//     public void addAccount(SavingsAccount account) {
-//        savingsAccounts.add(account);
-//     }
-//
-//     public void addAccount(CDInvestment account) {
-//        cdInvestments.add(account);
 //     }
 
 
