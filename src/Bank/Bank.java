@@ -2,6 +2,7 @@ package Bank;
 
 import Account.Account;
 import Account.BankAccount;
+import Account.*;
 
 import java.util.HashMap;
 
@@ -23,15 +24,24 @@ public class Bank {
         //get a client, and add it to that client
         //also add the account to the banks account list
         //create account and give it to the client
-        Account newAccount = new BankAccount();
+        accounts.put(account.getAccountNumber(), account);
     }
 
-    public Account createAccount() {
-
+    public Account createAccount(int acctNumber, int initialBalance, Client owner, String acctType) {
+        switch (acctType) {
+            case "Checking" :
+                Account account = new CheckingAccount(acctNumber, initialBalance, owner, "Checking");
+                return account;
+                break;
+            case "Savings" :
+                Account account = new SavingsAccount(acctNumber, initialBalance, owner, "Savings");
+                return account;
+            break;
+        }
     }
 
     //at minimum:
 
-    public SavingsAccount createSavingsAccount() {}
-    public CheckingAccount createCheckingAccount() {}
+//    public SavingsAccount createSavingsAccount() {}
+//    public CheckingAccount createCheckingAccount() {}
 }
