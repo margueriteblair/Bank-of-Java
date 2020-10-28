@@ -1,10 +1,12 @@
 package Account;
 
+import Bank.Client;
+
 public class CheckingAccount extends BankAccount {
     private boolean hasDebitCard;
     private int txCount;
 
-    public CheckingAccount(int accountNumber, int balance, String owner, boolean hasDebitCard) {
+    public CheckingAccount(int accountNumber, int balance, Client owner, boolean hasDebitCard) {
         super(accountNumber, balance, owner, "Checking");
         this.hasDebitCard = hasDebitCard;
     }
@@ -20,10 +22,6 @@ public class CheckingAccount extends BankAccount {
         super.withdraw(amt);
     }
 
-
-    //    public void incrementTxCount() {
-//        txCount++;
-//    }
     public int getBalance() {
         return balance;
     }

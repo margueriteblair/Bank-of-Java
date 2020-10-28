@@ -1,15 +1,16 @@
 package Account;
 
 
+import Bank.Client;
+
 public class SavingsAccount extends BankAccount {
     private int interest;
     private int txLimit;
     private int txCount;
 
-    public SavingsAccount(int accountNumber, int balance, String owner, int interest, int txCount, int txLimit) {
+    public SavingsAccount(int accountNumber, int balance, Client owner, int interest, int txLimit) {
         super(accountNumber, balance, owner, "Savings");
         this.interest = interest;
-        this.txCount = txCount;
         this.txLimit = txLimit;
     }
 
@@ -27,9 +28,6 @@ public class SavingsAccount extends BankAccount {
         super.withdraw(amt);
     }
 
-//    public void resetMonthlyTxCount() {
-//        txCount = 0;
-//    }
 
     public void incrementTxCount() {
         txCount++;

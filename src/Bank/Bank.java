@@ -27,14 +27,14 @@ public class Bank {
         accounts.put(account.getAccountNumber(), account);
     }
 
-    public Account createAccount(int acctNumber, int initialBalance, Client owner, String acctType) {
+    public Account createAccount(int acctNumber, int initialBalance, Client owner, String acctType, int interest, int txLimit) {
         switch (acctType) {
             case "Checking" :
                 Account account = new CheckingAccount(acctNumber, initialBalance, owner, "Checking");
                 return account;
                 break;
             case "Savings" :
-                Account account = new SavingsAccount(acctNumber, initialBalance, owner, "Savings");
+                Account account = new SavingsAccount(acctNumber, initialBalance, owner, interest, txLimit);
                 return account;
             break;
         }
