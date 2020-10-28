@@ -39,12 +39,6 @@ public class Client {
         }
 
         public void addDebitCard(int accountNum) {
-        //we need to take the accountNumber we pass in, and use that to match
-            //the accountNum from the accounts ArrayList
-            //can't use .indexOf() on objects
-            //THINK MARGIE HOW DO WE PULL THE ACCOUNT NUMBER
-            //FROM THE ACCOUNT LIST
-
             for (var acct : accounts) {
                 if (acct.getAccountNumber() == accountNum) {
                     linkedAccount = acct;
