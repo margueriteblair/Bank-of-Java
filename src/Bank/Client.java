@@ -56,6 +56,10 @@ public class Client {
         return "Accounts of " + name + "\n" + output + "Cards\n" + cardsOutput;
         }
 
+        public String getClientId() {
+            return clientId;
+        }
+
 
 
 
