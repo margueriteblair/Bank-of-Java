@@ -7,47 +7,42 @@ import BankTools.DebitCard;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.HashMap;
 
 public class Client {
-
     private String name;
     private String firstname;
     private String lastName;
     private String middleName;
     private String clientId;
-    private List<Account> accounts;
+    private HashMap<Integer, Account> accounts;
     private List<DebitCard> debitCards;
     private Account linkedAccount;
-//    private List<CheckingAccount> checkingAccounts;
-//    private List<SavingsAccount> savingsAccounts;
-//    private List<CDInvestment> cdInvestments;
+
 
     public Client(String firstname, String lastName, String clientId) {
         this.name = firstname + " " + lastName;
         this.firstname = firstname;
         this.lastName = lastName;
         this.clientId = clientId;
-//        this.checkingAccounts = new ArrayList<CheckingAccount>();
-//        this.savingsAccounts = new ArrayList<SavingsAccount>();
-//        this.cdInvestments = new ArrayList<CDInvestment>();
-        accounts = new ArrayList<>(); //it'll call the data type from the already defined list
+        accounts = new HashMap<>();
         debitCards = new ArrayList<>();
      }
 
         public void addAccount(Account account) {
-            accounts.add(account);
+        accounts.put(account.getAccountNumber(), account);
         }
 
         public void addDebitCard(int accountNum) {
-            for (var acct : accounts) {
+            for (var acct : accounts.values()) {
                 if (acct.getAccountNumber() == accountNum) {
                     linkedAccount = acct;
+                } else {
+                    System.out.println("Invalid account");
                 }
             }
-            DebitCard newCard = new DebitCard("000000000", "4444", "000", "Margie Blair", (CheckingAccount) linkedAccount);
         }
 
-//     }
 
 
 
