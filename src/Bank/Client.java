@@ -43,6 +43,19 @@ public class Client {
             }
         }
 
+        @Override
+        public String toString() {
+        String output = "";
+        for (int accountNum : accounts.keySet()) {
+            output += accounts.get(accountNum).getDetails() + "\n";
+        }
+        String cardsOutput = "";
+        for (var debitCard : debitCards) {
+            cardsOutput += debitCard.toString();
+        }
+        return "Accounts of " + name + "\n" + output + "Cards\n" + cardsOutput;
+        }
+
 
 
 
