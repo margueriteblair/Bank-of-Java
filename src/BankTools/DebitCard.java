@@ -37,4 +37,6 @@ public class DebitCard {
         //because all of our accounts implement Account interface
     }
 
+    public String toString() {return "cardNum " + cardNumber};
+
 }
