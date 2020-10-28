@@ -20,10 +20,11 @@ public class Bank {
         accounts = new HashMap<>();
     }
 
-    public void addAccount(Account account) {
+    public void addAccount(Account account, Client client) {
         //TODO: get client
         //TODO: create account and give it to client
         accounts.put(account.getAccountNumber(), account);
+        client.addAccount(account);
     }
 
     public Account createAccount(int acctNumber, int initialBalance, Client owner, String acctType, int interest, int txLimit) {
