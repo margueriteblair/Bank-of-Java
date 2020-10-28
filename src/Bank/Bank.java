@@ -21,9 +21,8 @@ public class Bank {
     }
 
     public void addAccount(Account account) {
-        //get a client, and add it to that client
-        //also add the account to the banks account list
-        //create account and give it to the client
+        //TODO: get client
+        //TODO: create account and give it to client
         accounts.put(account.getAccountNumber(), account);
     }
 
@@ -37,8 +36,4 @@ public class Bank {
         }
     }
 
-    //at minimum:
-
-//    public SavingsAccount createSavingsAccount() {}
-//    public CheckingAccount createCheckingAccount() {}
 }
