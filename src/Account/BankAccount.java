@@ -1,12 +1,14 @@
 package Account;
 
+import Bank.Client;
+
 public class BankAccount implements Account {
     private int accountNumber;
-    private String owner;
+    private Client owner;
     protected int balance;
     private String acctType;
 
-    public BankAccount(int accountNumber, int balance, String owner, String acctType) {
+    public BankAccount(int accountNumber, int balance, Client owner, String acctType) {
         this.accountNumber = accountNumber;
         this.balance = balance;
         this.owner = owner;
@@ -22,7 +24,7 @@ public class BankAccount implements Account {
     }
 
     @Override
-    public String getOwner() {
+    public Client getOwner() {
         return owner;
     }
 
