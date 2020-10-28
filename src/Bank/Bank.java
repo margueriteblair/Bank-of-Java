@@ -1,7 +1,6 @@
 package Bank;
 
 import Account.Account;
-import Account.BankAccount;
 import Account.*;
 
 import java.util.HashMap;
@@ -30,13 +29,14 @@ public class Bank {
     public Account createAccount(int acctNumber, int initialBalance, Client owner, String acctType, int interest, int txLimit) {
         switch (acctType) {
             case "Checking" :
-                Account account = new CheckingAccount(acctNumber, initialBalance, owner, "Checking");
+                Account account = new CheckingAccount(acctNumber, initialBalance, owner);
                 return account;
                 break;
             case "Savings" :
                 Account account = new SavingsAccount(acctNumber, initialBalance, owner, interest, txLimit);
                 return account;
             break;
+            default: return new BankAccount(acctNumber, initialBalance, owner, acctType);
         }
     }
 

@@ -6,9 +6,8 @@ public class CheckingAccount extends BankAccount {
     private boolean hasDebitCard;
     private int txCount;
 
-    public CheckingAccount(int accountNumber, int balance, Client owner, boolean hasDebitCard) {
+    public CheckingAccount(int accountNumber, int balance, Client owner) {
         super(accountNumber, balance, owner, "Checking");
-        this.hasDebitCard = hasDebitCard;
     }
 
     public int showTxCount() {

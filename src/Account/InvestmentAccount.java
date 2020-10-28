@@ -1,6 +1,6 @@
 package Account;
 
-import Bank.Client;
+import Bank.*;
 
 public class InvestmentAccount extends BankAccount {
     private int interestRate;
