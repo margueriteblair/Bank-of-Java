@@ -29,13 +29,9 @@ public class Bank {
     public Account createAccount(int acctNumber, int initialBalance, Client owner, String acctType, int interest, int txLimit) {
         switch (acctType) {
             case "Checking" :
-                Account account = new CheckingAccount(acctNumber, initialBalance, owner);
-                return account;
-                break;
+                return new CheckingAccount(acctNumber, initialBalance, owner);
             case "Savings" :
-                Account account = new SavingsAccount(acctNumber, initialBalance, owner, interest, txLimit);
-                return account;
-            break;
+                return new SavingsAccount(acctNumber, initialBalance, owner, interest, txLimit);
             default: return new BankAccount(acctNumber, initialBalance, owner, acctType);
         }
     }
