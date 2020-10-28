@@ -22,5 +22,16 @@ public class Bank {
     public void addAccount(Account account) {
         //get a client, and add it to that client
         //also add the account to the banks account list
+        //create account and give it to the client
+        Account newAccount = new BankAccount();
     }
+
+    public Account createAccount() {
+
+    }
+
+    //at minimum:
+
+    public SavingsAccount createSavingsAccount() {}
+    public CheckingAccount createCheckingAccount() {}
 }
