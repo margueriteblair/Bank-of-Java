@@ -32,16 +32,16 @@ public class Bank {
 
     }
 
-    public Account createAccount(int acctNumber, int initialBalance, Client owner, String acctType, int interest, int txLimit) {
+    public Account createAccount(int acctNumber, int initialBalance, Client owner, String acctType, int interest, int txLimit, int period, int timeFrame, char periodType) {
         switch (acctType) {
             case "Checking" :
                 return new CheckingAccount(acctNumber, initialBalance, owner);
             case "Savings" :
                 return new SavingsAccount(acctNumber, initialBalance, owner, interest, txLimit);
             case "Investment" :
-                return new InvestmentAccount(initialBalance, acctNumber, owner, interest, int period, char periodType);
+                return new InvestmentAccount(initialBalance, acctNumber, owner, interest, period, periodType);
             case "CD" :
-                return new CDInvestment(acctNumber, initialBalance, owner, interest, int period, int timeFrame);
+                return new CDInvestment(acctNumber, initialBalance, owner, interest, period, timeFrame);
             default: return new BankAccount(acctNumber, initialBalance, owner, acctType);
         }
     }
