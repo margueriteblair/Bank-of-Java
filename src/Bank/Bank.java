@@ -38,6 +38,10 @@ public class Bank {
                 return new CheckingAccount(acctNumber, initialBalance, owner);
             case "Savings" :
                 return new SavingsAccount(acctNumber, initialBalance, owner, interest, txLimit);
+            case "Investment" :
+                return new InvestmentAccount(initialBalance, acctNumber, owner, interest, int period, char periodType);
+            case "CD" :
+                return new CDInvestment(acctNumber, initialBalance, owner, interest, int period, int timeFrame);
             default: return new BankAccount(acctNumber, initialBalance, owner, acctType);
         }
     }
