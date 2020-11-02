@@ -51,4 +51,15 @@ public class Bank {
         }
     }
 
+    public void displayClients() {
+        for (var client: clients.keySet()) {
+            System.out.println(clients.get(client));
+        }
+    }
+
+    public Account getAccount(int accountId) {
+        return accounts.get(accountId);
+    }
+
+
 }
