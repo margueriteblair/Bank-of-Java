@@ -3,7 +3,7 @@ package Account;
 
 import Bank.Client;
 
-public class SavingsAccount extends BankAccount {
+public class SavingsAccount extends BankAccount implements Account {
     private int interest;
     private int txLimit;
     private int txCount;
