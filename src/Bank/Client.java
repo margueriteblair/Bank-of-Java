@@ -60,7 +60,9 @@ public class Client {
             return clientId;
         }
 
-
+        public String getName() {
+            return firstname + " " + lastName;
+        }
 
 
 }
