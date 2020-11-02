@@ -1,14 +1,13 @@
 package Account;
 
-import Account.InvestmentAccount;
-import Bank.*;
+import Bank.Client;
 
 public class CDInvestment extends InvestmentAccount {
-    //hello world
+    private String timePeriod = "Y";
     private int timeFrame;
 
     public CDInvestment(int balance, int accountNum, Client owner, int interestRate, int period, int timeFrame) {
-        super(balance, accountNum, owner, interestRate, period, 'M');
+        super(balance, accountNum, owner, interestRate, period, "M");
         this.timeFrame = timeFrame;
     }
 
@@ -17,7 +16,6 @@ public class CDInvestment extends InvestmentAccount {
             applyInterest();
         }
     }
-
     @Override
     public void withdraw(int amt) {
         return;
