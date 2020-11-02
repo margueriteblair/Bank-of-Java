@@ -30,16 +30,16 @@ public class Client {
      }
 
         public void addAccount(Account account) {
-        accounts.put(account.getAccountNumber(), account);
+            accounts.put(account.getAccountNumber(), account);
         }
 
         public void addDebitCard(int accountNum) {
-            for (var acct : accounts.values()) {
-                if (acct.getAccountNumber() == accountNum) {
-                    linkedAccount = acct;
-                } else {
-                    System.out.println("Invalid account");
-                }
+            Account account = accounts.get(accountNum);
+            if (account instanceof CheckingAccount) {
+                DebitCard newCard = new DebitCard("7277272", "1234", "888", this.name, (CheckingAccount) account);
+                debitCards.add(newCard);
+            } else {
+                System.out.println("Invalid Account");
             }
         }
 

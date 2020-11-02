@@ -32,7 +32,7 @@ public class Bank {
 
     }
 
-    public Account createAccount(int acctNumber, int initialBalance, Client owner, String acctType, int interest, int txLimit, int period, int timeFrame, char periodType) {
+    public Account createAccount(int acctNumber, int initialBalance, Client owner, String acctType, int interest, int txLimit, int period, int timeFrame, String periodType) {
         switch (acctType) {
             case "Checking" :
                 return new CheckingAccount(acctNumber, initialBalance, owner);
