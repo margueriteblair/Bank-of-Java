@@ -2,6 +2,7 @@ package Bank;
 
 import Account.Account;
 import Account.*;
+import BankTools.UI;
 
 import java.util.HashMap;
 
@@ -37,16 +38,24 @@ public class Bank {
 
     }
 
-    public Account createAccount(int acctNumber, int initialBalance, Client owner, String acctType, int interest, int txLimit, int period, int timeFrame, String periodType) {
+    public Account createAccount(int acctNumber, int initialBalance, Client owner, String acctType, UI ui) {
         switch (acctType) {
             case "Checking" :
                 return new CheckingAccount(acctNumber, initialBalance, owner);
             case "Savings" :
+                int interest = ui.requestInt("Please enter an interest rate:");
+                int txLimit = ui.requestInt("Please enter a savings account transaction limit:");
                 return new SavingsAccount(acctNumber, initialBalance, owner, interest, txLimit);
             case "Investment" :
-                return new InvestmentAccount(initialBalance, acctNumber, owner, interest, period, periodType);
+                int interestInvestment = ui.requestInt("Please enter an interest rate:");
+                int period = ui.requestInt("Please input a period length:");
+                String periodType = ui.requestString("Please input a period type:");
+                return new InvestmentAccount(initialBalance, acctNumber, owner, interestInvestment, period, periodType);
             case "CD" :
-                return new CDInvestment(acctNumber, initialBalance, owner, interest, period, timeFrame);
+                int interestCD = ui.requestInt("Please enter an interest rate:");
+                int periodCD = ui.requestInt("Please input a period length:");
+                int timeFrame = ui.requestInt("Please input a time frame: ");
+                return new CDInvestment(acctNumber, initialBalance, owner, interestCD, periodCD, timeFrame);
             default: return new BankAccount(acctNumber, initialBalance, owner, acctType);
         }
     }
@@ -60,6 +69,5 @@ public class Bank {
     public Account getAccount(int accountId) {
         return accounts.get(accountId);
     }
-
 
 }
