@@ -1,14 +1,14 @@
 package Account;
 
-import Bank.*;
+import Bank.Client;
 
-public class InvestmentAccount extends BankAccount {
+public class InvestmentAccount extends BankAccount implements Account {
     private int interestRate;
     private int period;
-    private char periodType; //D=Day, M=Month, W=Week, Q=Quarter, Y=Year
+    private String periodType; //D=Day, M=Month, W=Week, Q=Quarter, Y=Year
     static int withdrawFee = 100;
 
-    public InvestmentAccount(int balance, int accountNumber, Client owner, int interestRate, int period, char periodType) {
+    public InvestmentAccount(int balance, int accountNumber, Client owner, int interestRate, int period, String periodType) {
         super(accountNumber, balance, owner, "Investment");
         this.interestRate = interestRate;
         this.period = period;
